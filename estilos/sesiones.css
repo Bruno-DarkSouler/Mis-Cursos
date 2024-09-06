@@ -1,0 +1,50 @@
+html{
+    height: 100%;
+}
+
+body{
+    display: flex;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    display: flex;
+    width: 25rem;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #de9102;
+    border-radius: 15px;
+    padding: 2%;
+}
+
+label{
+    display: inline;
+}
+
+input{
+    border: 3px solid black;
+    height: 2rem;
+    width: 20rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.campos{
+    margin: 5px;
+}
+
+.enviar{
+    background-color: #de9102;
+}
+
+.selector_rol{
+    height: auto;
+    width: auto;
+}
+
+.enviar:hover{
+    background-color: black;
+    color: #de9102;
+    border: 3px solid #de9102;
+}
