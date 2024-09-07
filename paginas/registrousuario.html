@@ -10,41 +10,42 @@
     <main>
         <form action="../archivosphp/registrar.php" method="post">
             <div class="campos">
-                <label for="text">Nombre:</label><br>
+                <label for="text">Nombre:</label>
                 <input type="text" name="nombre" required>
             </div>
             <div class="campos">
-                <label for="text">Apellido: </label><br>
+                <label for="text">Apellido: </label>
                 <input type="text" name="apellido" required>
             </div>
             <div class="campos">
-                <label for="text">Usted es:</label><br>
+                <label for="text">Usted es:</label>
                 <input class="selector_rol" type="radio" name="gender" value="Estudiante">Estudiante
                 <input class="selector_rol" type="radio" name="gender" value="Instructores">Instructor
             </div>
             <div class="campos">
-                <label for="text">Especialidad:</label><br>
+                <label for="text">Especialidad:</label>
                 <input type="text" name="especialidad">
             </div>
             <div class="campos">
-                <label for="text">Correo electrónico:</label><br>
+                <label for="text">Correo electrónico:</label>
                 <input type="email" name="mail" required>
             </div>
             <div class="campos">
-                <label for="text">Teléfono:</label><br>
+                <label for="text">Teléfono:</label>
                 <input type="number" name="tel">
             </div>
             <div class="campos">
-                <label for="text">Contraseña:</label><br>
+                <label for="text">Contraseña:</label>
                 <input type="password" name="contra" required>
             </div>
             <div class="campos">
-                <label for="text">Repita su contraseña:</label><br>
+                <label for="text">Repita su contraseña:</label>
                 <input type="password" name="contra2" required>
             </div>
             <div class="campos">
                 <input class="enviar" type="submit">
             </div>
+            <script src="../archivosjs/contrase.js"></script>
         </form>
     </main>
 </body>

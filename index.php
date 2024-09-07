@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -59,7 +63,11 @@
     </div>
   </header>
   <main>
-    <center><img class="imagen_main" src="./imagenes/logotipo_principal_2_sin_fondo.png"></center>
+    <?php
+      if($_SESSION["nombre"] != ""){
+        echo "<h1>" . "Hola " . $_SESSION['nombre'] . "</h1>";
+      }
+    ?>
   </main>
   <footer></footer>
 </body>

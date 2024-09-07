@@ -14,16 +14,15 @@
     if ($rol == "Instructores"){
         $consulta = "INSERT INTO `instructores`(`ID_instructores`, `Nombre`, `Apellido`, `Especialidad`, `Email`, `Telefono`, `contra`) VALUES ('[value-1]','$nombre','$apellido','$especialidad','$mail','$tel','$contra')";
     } else{
-        $consulta = "INSERT INTO estudiantes(ID_estudiantes, Nombre, Apellido, Telefono, Fecha_de_inscripcion, contra, Email) VALUES ('','$nombre','$apellido','$tel','$fecha','$contra','$mail')";
+        $consulta = "INSERT INTO estudiantes(ID_estudiantes, Nombre, Apellido, Telefono, Fecha_de_inscripcion, contra, mail) VALUES ('','$nombre','$apellido','$tel','$fecha','$contra','$mail')";
     }
 
-    if ($contra != $contra2){
-        die("Las contraseñas no coinciden");
-    } else{
-        if (mysqli_query($conexion, $consulta)){
-            echo "Su cuenta ha sido registrada con éxito";
-        }
+    if (mysqli_query($conexion, $consulta)){
+        session_start();
+        $_SESSION["nombre"] = $nombre;
+        $_SESSION["email"] = $mail;
+        $_SESSION["contra"] = $contra;
+        header("Location: ../index.php");
     }
-
     mysqli_close($conexion);
 ?>
