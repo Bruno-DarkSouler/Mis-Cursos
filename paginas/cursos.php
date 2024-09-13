@@ -1,19 +1,18 @@
 <?php
-  require("./archivosphp/verificarse.php");
+  require("../archivosphp/verificarse.php");
+  require("../archivosphp/sistema.php");
 ?>
 
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="./estilos/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../estilos/style.css">
+    <title>Document</title>
 </head>
-
 <body>
-  <header>
+<header>
     <div class="encabezado">
       <div class="logo_titulo">
         <img class="logo_lab_bases_de_datos" src="./imagenes/logo_sin_fondo_lab_bd.png">
@@ -58,13 +57,30 @@
       </div>
     </div>
   </header>
+
   <main>
-    <?php
-      if($_SESSION["nombre"] != ""){
-        echo "<h1>" . "Hola " . $_SESSION['nombre'] . "</h1>";
-      }
-    ?>
+    <div>
+        <?php
+            $consulta = "SELECT cursos.Nombre_del_curso, cursos.Categoria, cursos.Descripcion FROM cursos INNER JOIN matriculas ON matriculas.ID_cursos = cursos.ID_cursos INNER JOIN estudiantes ON estudiantes.ID_estudiantes = matriculas.ID_estudiantes WHERE '$_SESSION[id]' = estudiantes.ID_estudiantes";
+            $resultado = $conexion->query($consulta);
+            
+            if($resultado->num_rows > 0){
+                while($filas = $resultado->fetch_assoc()){
+                    echo "<h3>" . $filas["Nombre_del_curso"] . "|" . $filas["Categoria"] . "</h3><br>";
+                }
+            }
+            ?>
+    </div>
+    
+    <div>
+        <?php
+            if($resultado->num_rows > 0){
+                while($filas = $resultado->fetch_assoc()){
+                    echo "<h3>" . $filas["Nombre_del_curso"] . "|" . $filas["Categoria"] . "|" . $filas["Descripcion"] . "</h3><br>";
+                }
+            }
+        ?>
+    </div>
   </main>
-  <footer></footer>
 </body>
-</html> 
+</html>
