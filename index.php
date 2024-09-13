@@ -49,13 +49,13 @@
       </div>
 
       <div class="sesiones">
-        <div class="crear_cuenta">
+        <a href="./paginas/registrousuario.html"><div class="crear_cuenta">
           <u><h3>Crear cuenta</h3></u>
-        </div>
+        </div></a>
 
-        <div class="iniciar_sesion">
+        <a href="./paginas/iniciosesion.html"><div class="iniciar_sesion">
           <h3>Iniciar sesión</h3>
-        </div>
+        </div></a>
       </div>
     </div>
   </header>
