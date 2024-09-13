@@ -65,3 +65,9 @@ header{
 .imagen_main{
   margin-top: 30px;
 }
+a{
+  text-decoration: none;
+}
+svg{
+  color: black;
+}
