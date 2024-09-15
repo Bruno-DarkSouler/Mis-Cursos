@@ -4,10 +4,11 @@
 
     require("./sistema.php");
 
-    $mail =$_POST["mail"];
-    $contra =$_POST["contra"];
+    $Email = $_POST["Email"];
+    $rol = $_POST["gender"];
+    $contra = $_POST["contra"];
 
-    $consulta = "SELECT ID_estudiantes, contra, Email, Nombre FROM estudiantes WHERE '$mail' = estudiantes.Email and '$contra' = estudiantes.contra";
+    $consulta = "SELECT ID_estudiantes, contra, Email, Nombre FROM estudiantes WHERE '$Email' = estudiantes.Email and '$contra' = estudiantes.contra";
     $resultado = $conexion->query($consulta);
 
     if($resultado->num_rows > 0){
@@ -15,7 +16,8 @@
         while($row = $resultado->fetch_assoc()){
             $_SESSION["id"] = $row["ID_estudiantes"];
             $_SESSION["nombre"] = $row["Nombre"];
-            $_SESSION["email"] = $row["mail"];
+            $_SESSION["email"] = $row["Email"];
+            $_SESSION["rol"] = $rol;
             $_SESSION["contra"] = $row["contra"];
             header("Location: ../index.php");
         }
