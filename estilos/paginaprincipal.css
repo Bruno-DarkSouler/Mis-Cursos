@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+  }
+  .logo_lab_bases_de_datos{
+    width: 60px;
+    height: 60px;
+    margin-left: 13px;
+  }
+  .titulo{
+    font: 200% sans-serif;
+    margin-top: 13px;
+  }
+  .logo_titulo{
+    display: flex;
+  }
+  p{
+    margin-left: 6px;
+    font: 100% sans-serif;
+    color: white;
+  }
+  .opciones{
+    display: flex;
+  }
+  .perfil{
+    display: flex;
+  }
+  .categoria{
+    margin-left: 17px;
+    display: flex;
+  }
+  .perfil{
+    margin-left: 17px;
+    display: flex;
+  }
+  .configuración{
+    margin-left: 17px;
+    display: flex;
+  }
+  .ayuda{
+    margin-left: 17px;
+    display: flex;
+  }
+  header{
+    background-color: #de9102;
+  }
+  .encabezado{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .crear_cuenta{
+    margin-right: 30px;
+    font: 100% sans-serif;
+    color: white;
+  }
+  .iniciar_sesion{
+    font: 100% sans-serif;
+    color: white;
+  }
+  .sesiones{
+    margin-right: 30px;
+    display: flex;
+  }
+  .imagen_main{
+    margin-top: 30px;
+  }

@@ -1,7 +1,3 @@
-<?php
-  require("./archivosphp/verificarse.php");
-?>
-
 <!DOCTYPE html>
 <html>
 
@@ -60,11 +56,7 @@
     </div>
   </header>
   <main>
-    <?php
-      if($_SESSION["nombre"] != ""){
-        echo "<h1>" . "Hola " . $_SESSION['nombre'] . "</h1>";
-      }
-    ?>
+    
   </main>
   <footer></footer>
 </body>
