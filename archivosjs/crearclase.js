@@ -36,25 +36,27 @@ let numat = document.getElementById("numat");
 let nuejer = document.getElementById("nuejer");
 let nutar = document.getElementById("nutar");
 
-crear.onclick = formatearTexto;
+crear.onclick = formatearMaterial;
 numat.onclick = crearmat;
 nuejer.onclick = crearejer;
 nutar.onclick = creartar;
 
-function formatearTexto(){
-    let contenido = "";
+function formatearMaterial(){
+    let formatMat = {material:[[]]};
     let ajax = new XMLHttpRequest();
     for(let j=0; j<material.cuerpo.length; j++){
         let aux = document.querySelectorAll("#" + material.cuerpo[j].id + " .texto");
         for(let i=0; i<aux.length; i++){
-            contenido += aux[i].value + "[ruptura]";
+            formatMat.material.at(-1).push(aux[i].value);
         }
-        contenido += "[ruptura2]";
+        formatMat.material.push([]);
     }
-    console.log(contenido);
+    formatMat.material.pop();
+    console.log(formatMat.material);
+    let json = JSON.stringify(formatMat);
     ajax.open("POST", "../archivosphp/pruebaajax.php");
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    ajax.send("cadena=" + contenido);
+    ajax.send("cadena=" + json);
     ajax.onload = function(){
         let x = ajax.responseText;
         console.log(x);
