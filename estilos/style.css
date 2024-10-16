@@ -28,6 +28,9 @@ nav{
   width: 300px;
   margin-right: 300px;
 }
+.precios, .ayuda, .fundadores{
+  color: black;
+}
 .logeo{
   display: flex;
   align-items: center;
@@ -38,6 +41,7 @@ nav{
 .iniciar-sesion{
   width: 80px;
   text-align: center;
+  color: black;
 }
 .crear-cuenta{
   width: 80px;
@@ -216,4 +220,7 @@ nav{
 }
 .publicitador{
   background: linear-gradient(white, #DE9102);
+}
+a{
+  text-decoration: none;
 }

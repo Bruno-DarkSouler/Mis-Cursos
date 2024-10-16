@@ -1,16 +1,66 @@
-body{
+*{
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    justify-content: center;
 }
 a{
     text-decoration: none;
 }
-.formulario{
+body{
+    background-color: #DE9102;
+}
+form{
+    height: 60rem;
+    width: 25rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 13px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+.text_iniciar_sesion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80px;
+}
+hr{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.campos{
+    margin-top: 30px;
+    display: block;
+    height: 60px;
+    width: 100%;
+}
+label{
+    display: block;
+}
+input[type="email"], input[type="password"]{
+    margin-top: 8px;
+    width: 100%;
+    padding: 8px;
+}
+.div_enviar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.url_crear_cuenta{
+    margin-top: 13px;
+}
+.enviar{
+    border: none;
+    height: 30%;
+    width: 80%;
+    background-color: #DE9102;
+}
+.div_enviar{
+    height: 60px;
 }
