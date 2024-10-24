@@ -1,0 +1,8 @@
+Campus:
+    -Mostrar Nombre, Descripción De Cursos
+
+Cursos:
+    -Mostrar Nombre, Actividades.Titulos De Clases
+
+Clases:
+    -Mostrar titulos, contenidos De Clases, actividades
