@@ -8,7 +8,16 @@
 </head>
 <body>
     <main>
+
+        <div class="imagen_principal">
+            <img src="" alt="">
+        </div>
+
         <form action="../archivosphp/registrar.php" method="post">
+
+            <div class="div_texto_principal">Crear cuenta</div>
+            <hr>
+
             <div class="campos">
                 <label for="text">Nombre:</label><br>
                 <input type="text" name="nombre" required>
@@ -17,10 +26,10 @@
                 <label for="text">Apellido: </label><br>
                 <input type="text" name="apellido" required>
             </div>
-            <div class="campos">
-                <label for="text">Usted es:</label><br>
-                <input class="selector_rol" type="radio" name="gender" value="estudiante">Estudiante
-                <input class="selector_rol" type="radio" name="gender" value="instructores">Instructor
+            <div class="campos_selector">
+                <label for="text">Usted es:</label>
+                <div class="selector_rol"><input type="radio" name="gender" value="estudiante">Estudiante</div>
+                <div class="selector_rol"><input type="radio" name="gender" value="instructores">Instructor</div>
             </div>
             <div class="campos">
                 <label for="text">Especialidad:</label><br>
@@ -42,7 +51,7 @@
                 <label for="text">Repita su contraseña:</label><br>
                 <input type="password" name="contra2" required>
             </div>
-            <div class="campos">
+            <div class="campos_enviar">
                 <input class="enviar" type="submit">
             </div>
             <script src="../archivosjs/contrase.js"></script>
