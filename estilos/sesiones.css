@@ -1,57 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 html{
     height: 100%;
 }
 
 body{
+    background-image: url("../imagenes/imagen_crear_cuenta.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
     min-height: 100%;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #DE9102;
 }
-
-main{
-    display: flex;
-    width: 25rem;
-    align-items: center;
-    justify-content: center;
-    border: 5px solid #de9102;
-    border-radius: 15px;
-    padding: 2%;
-}
-
-label{
-    display: block;
-}
-
-input{
-    border: 3px solid black;
-    height: 1.5rem;
-    width: 20rem;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 form{
-    display: inline;
+    background-color: white;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
+    width: 30rem;
+    padding: 8%;
+    border-radius: 13px
 }
-
-
+.div_texto_principal{
+    width: auto;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 230%;
+}
+hr{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
 .campos{
-    display: inline-block;
-    margin: 5px;
-}
-
-.enviar{
-    background-color: #de9102;
-}
-
-.selector_rol{
-    height: auto;
+    margin-top: 1.5rem;
     width: auto;
 }
-
-.enviar:hover{
-    background-color: black;
-    color: #de9102;
-    border: 3px solid #de9102;
+input[type="text"],[type="email"],[type="number"],[type="password"]{
+    margin-top: 0.3rem;
+    padding: 0.5rem;
+    width: 92%;
+}
+.campos_selector{
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+input[type="radio"]{
+    margin-right: 13px;
+}
+.campos_enviar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 8rem;
+}
+input[type="submit"]{
+    font-size: 113%;
+    border: none;
+    background-color: #DE9102;
+    width: 13rem;
+    height: 3rem;
+    color: white;
+}
+input[type="submit"]:hover{
+    background-color: #a16a03;
 }
