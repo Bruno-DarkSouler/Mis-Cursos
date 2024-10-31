@@ -28,21 +28,24 @@
 
           for($i = 0; $i<count($material["titulo"]); $i++){
             echo "
-            <div>
+            <div class=\"material\">
               <h1>".$material["titulo"][$i]."</h1>
               <p>".$material["texto"][$i]."</p>
             </div>";
           }
           for($i = 0; $i<count($tarea["titulo"]); $i++){
             echo "
-            <div>
+            <div class=\"tarea\">
               <h1>".$tarea["titulo"][$i]."</h1>
               <p>".$tarea["texto"][$i]."</p>
+              <form action="">
+                <input type="file">
+              </form>
             </div>";
           }
           for($i = 0; $i<count($mulopc["texto"]); $i++){
             echo "
-            <div>
+            <div class=\"multiple_opcion\">
               <p>".$mulopc["texto"][$i]."</p>";
             for($j=0; $j<count($mulopc["opciones"][$i]); $j++){
               echo "
