@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.principal{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20rem 20rem 20rem;
+    grid-template-rows: 60% 60%;
+    grid-gap: 3rem;
+}
+.lenguaje{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: orange;
+}
+.nom_lenguaje{
+    font-size: 130%;
+    margin-top: 1rem;
+}
