@@ -78,3 +78,21 @@ input[type="submit"]{
 input[type="submit"]:hover{
     background-color: #a16a03;
 }
+
+.especialidad{
+    font-size: 113%;
+    border: none;
+    background-color: white;
+    width: 18rem;
+    height: 2.5rem;
+    color: #DE9102;
+    border-radius: 13px;
+
+    
+}
+
+.campos_especialidad{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}

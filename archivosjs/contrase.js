@@ -5,3 +5,13 @@ if (contra1.value == contra2.value){
     contra2.innerHTML="HOLAAAA"
 }
 
+function toggleEspecialidad() {
+    var especialidadContainer = document.getElementById('especialidad-container');
+    var selectedRole = document.querySelector('input[name="gender"]:checked');
+    
+    if (selectedRole && selectedRole.value === 'instructores') {
+        especialidadContainer.style.display = 'flex';
+    } else {
+        especialidadContainer.style.display = 'none';
+    }
+}
