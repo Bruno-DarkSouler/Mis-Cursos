@@ -4,7 +4,7 @@ boton_agregar_mulopc.onclick = Agregar_mulopc;
 const botons_crear_clase = document.getElementById("crear");
 botons_crear_clase.onclick = Enviar_JSONs;
 
-const body = document.getElementsByTagName("body");
+const body = document.getElementsByTagName("main");
 
 const mulopc = {
     contenedor_general: [],
@@ -17,8 +17,10 @@ const mulopc = {
 function Agregar_mulopc(){
     mulopc.contenedor_general.push(document.createElement("div"));
     mulopc.contenedor_general.at(-1).id = "mulopc-" + mulopc.contenedor_general.length;
+    mulopc.contenedor_general.at(-1).className = "mulopc";
     mulopc.texto.push(document.createElement("textarea"));
     mulopc.boton_agregar_opc.push(document.createElement("button"));
+    mulopc.boton_agregar_opc.at(-1).innerHTML = "Nueva opción";
     mulopc.boton_agregar_opc.at(-1).id = "agregaropc-" + mulopc.boton_agregar_opc.length;
     mulopc.boton_agregar_opc.at(-1).onclick = function(){Agregar_opc(this.id.split("-")[1])};
     body[0].appendChild(mulopc.contenedor_general.at(-1));
@@ -30,8 +32,10 @@ function Agregar_opc(num_mulopc){
     console.log(Number(num_mulopc));
     mulopc.contenedor_opcion.push(document.createElement("div"));
     mulopc.contenedor_opcion.at(-1).id = "contenedoropc-" + mulopc.contenedor_opcion.length;
+    mulopc.contenedor_opcion.at(-1).className = "opc";
     mulopc.opciones.push(document.createElement("input"));
     mulopc.opciones.type = "text";
+    mulopc.opciones.className = "textoOpc";
     mulopc.opciones.id = "textoopc-" + mulopc.opciones.length;
     let opc = document.createElement("input");
     opc.type = "radio";
@@ -44,14 +48,14 @@ function Agregar_opc(num_mulopc){
 }
 
 function Enviar_JSONs(){
-    const mulopc_JSON = {texto: [], opciones: [], respuesta: 0};
+    const mulopc_JSON = {texto: [], opciones: [], respuesta: []};
     for(let i=0; i<mulopc.contenedor_general.length; i++){
         mulopc_JSON.texto.push(mulopc.texto[i].value);
         mulopc_JSON.opciones.push([]);
         for(let j=0; j<mulopc.opciones.length; j++){
             mulopc_JSON.opciones.at(-1).push(mulopc.opciones[j].value);
             if(mulopc.opciones[j].value = "1"){
-                mulopc_JSON.respuesta = j;
+                mulopc_JSON.respuesta.push(j);
             }
         }
     }

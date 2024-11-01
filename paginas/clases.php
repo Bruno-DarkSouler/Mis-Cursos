@@ -1,5 +1,5 @@
 <!-- <?php
-  //require("./archivosphp/verificarse.php");
+  // require("./archivosphp/verificarse.php");
 ?> -->
 
 <!DOCTYPE html>

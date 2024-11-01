@@ -10,6 +10,7 @@ const material = {
 function Agregar_material(){
     material.contenedor_general.push(document.createElement("div"));
     material.contenedor_general.at(-1).id = "material-" + material.contenedor_general.length;
+    material.contenedor_general.at(-1).className = "material";
     material.titulo.push(document.createElement("input"));
     material.texto.push(document.createElement("textarea"));
     body[0].appendChild(material.contenedor_general.at(-1));

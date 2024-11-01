@@ -12,9 +12,11 @@
         <label for="text">Descripción del curso:</label><br>
         <input type="text" name="desc"><br>
         <label for="text">Tema del curso:</label><br>
-        <input type="text" name="tema"><br>
-        <label for="date">Fecha de finalización del curso:</label><br>
-        <input type="date" name="fechaF"><br>
+        <select name="tema" id="">
+            <option value="C++">C++</option>
+            <option value="Python">Python</option>
+            <option value="HTML y CSS">HTML y CSS</option>
+        </select><br>
         <label for="number">Precio del curso:</label><br>
         <input type="number" name="costo"><br>
         <input type="submit">

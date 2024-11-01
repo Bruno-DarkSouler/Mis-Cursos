@@ -1,0 +1,70 @@
+html{
+    min-height: 100%;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    background-color: rgb(201, 201, 201);
+    padding: 0.5rem;
+    width: 60%;
+    border-radius: 1rem;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    height: 2.5rem;
+    width: 10rem;
+    font-size: medium;
+    border: 3px solid lightgray;
+    background-color: #DE9102;
+    color: white;
+    /* box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.3); */
+}
+
+textarea, input{
+    display: flex;
+    border: #DE9102 solid 3px;
+    border-radius: 0.5rem;
+    background-color: aliceblue;
+}
+
+#agregar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.agregar{
+    background-color: #ffe6b9;
+    color: #DE9102;
+    margin: 1rem;
+}
+
+#crear{
+    background-color: #DE9102;
+    color: #ffe6b7;
+}
+
+.mulopc, .material, .tarea{
+    width: 60%;
+    background-color: rgb(231, 231, 231);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.opc{
+    display: flex;
+    align-items: center;
+    height: 2rem;
+}
+
+/* -------------------------------------------------------------------------------------------------------------- */
