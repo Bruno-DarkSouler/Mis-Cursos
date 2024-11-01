@@ -4,17 +4,15 @@ const cursos = [
         descripcion: "Domina Java desde cero: POO, colecciones, multithreading, Spring Boot y desarrollo de aplicaciones empresariales.",
         precio: "$USD 19.99",
         icono: "☕",
-        duracion: "16 semanas",
         nivel: "Todos los niveles",
         tecnologia: "Java",
         
     },
     {
         titulo: "Desarrollo Web con HTML",
-        descripcion: "Aprende desarrollo web moderno con HTML5, CSS3 y JavaScript. Crea sitios web responsive y dinámicos.",
+        descripcion: "Aprende desarrollo web moderno con HTML, CSS y JavaScript. Crea sitios web responsive y dinámicos.",
         precio: "$USD 20.99",
         icono: "🌐",
-        duracion: "10 semanas",
         nivel: "Principiante - intermedio",
         tecnologia: "HTML",
         
@@ -23,8 +21,7 @@ const cursos = [
         titulo: "C++ Avanzado",
         descripcion: "Programación en C++ moderna: STL, templates, programación genérica, optimización y patrones de diseño.",
         precio: "$USD 12.99",
-        icono: "⚙️",
-        duracion: "14 semanas",
+        icono: "👨🏾‍💻",
         nivel: "Intermedio - Avanzado",
         tecnologia: "C++",
         
@@ -34,7 +31,6 @@ const cursos = [
         descripcion: "Aprende SQL desde lo básico hasta consultas avanzadas. Optimización de consultas bases de datos.",
         precio: "$USD 11.99",
         icono: "📊",
-        duracion: "12 semanas",
         nivel: "Todos los niveles",
         tecnologia: "SQL",
     },
@@ -43,8 +39,7 @@ const cursos = [
         descripcion: "Domina MongoDB: CRUD, framework de agregación, índices, replicación y arquitecturas NoSQL.",
         precio: "$USD 23.99",
         icono: "🍃",
-        duracion: "8 semanas",
-        nivel: "Intermedio - principiante",
+        nivel: "Principiante - intermedio",
         tecnologia: "MongoDB",
        
     },
@@ -53,13 +48,14 @@ const cursos = [
         descripcion: "Gestión profesional de bases de datos MySQL: diseño, optimización, respaldo y recuperación.",
         precio: "$USD 20.99",
         icono: "🐬",
-        duracion: "10 semanas",
-        nivel: "Intermedio - principiante",
+        nivel: "Principiante - intermedio",
         tecnologia: "MySQL",
-        
     }
 ];
-
+function handleImageError(img) {
+    img.onerror = null; 
+    img.src = '../icon.jpg'; 
+}
 function crearTarjetasCursos() {
     const contenedor = document.getElementById('contenedor-cursos');
     
@@ -75,7 +71,6 @@ function crearTarjetasCursos() {
             <div class="contenido-curso">
                 <h3 class="titulo-curso">${curso.titulo}</h3>
                 <div class="caracteristicas-curso">
-                    <span class="caracteristica">⏱️ ${curso.duracion}</span>
                     <span class="caracteristica">📚 ${curso.nivel}</span>
                     ${curso.certificado ? '<span class="caracteristica">🏆 Certificado</span>' : ''}
                 </div>

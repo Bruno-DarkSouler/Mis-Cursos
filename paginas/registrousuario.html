@@ -14,46 +14,49 @@
         </div>
 
         <form action="../archivosphp/registrar.php" method="post">
-
-            <div class="div_texto_principal">Crear cuenta</div>
-            <hr>
-
-            <div class="campos">
-                <label for="text">Nombre:</label><br>
-                <input type="text" name="nombre" required>
-            </div>
-            <div class="campos">
-                <label for="text">Apellido: </label><br>
-                <input type="text" name="apellido" required>
-            </div>
-            <div class="campos_selector">
-                <label for="text">Usted es:</label>
-                <div class="selector_rol"><input type="radio" name="gender" value="estudiante">Estudiante</div>
-                <div class="selector_rol"><input type="radio" name="gender" value="instructores">Instructor</div>
-            </div>
-            <div class="campos">
-                <label for="text">Especialidad:</label><br>
-                <input type="text" name="especialidad">
-            </div>
-            <div class="campos">
-                <label for="text">Correo electrónico:</label><br>
-                <input type="email" name="mail" required>
-            </div>
-            <div class="campos">
-                <label for="text">Teléfono:</label><br>
-                <input type="number" name="tel">
-            </div>
-            <div class="campos">
-                <label for="text">Contraseña:</label><br>
-                <input type="password" name="contra" required>
-            </div>
-            <div class="campos">
-                <label for="text">Repita su contraseña:</label><br>
-                <input type="password" name="contra2" required>
-            </div>
-            <div class="campos_enviar">
-                <input class="enviar" type="submit">
-            </div>
+                <div class="div_texto_principal">Crear cuenta</div>
+                <hr>
+                <div class="campos">
+                    <label for="text">Nombre:</label><br>
+                    <input type="text" name="nombre" required>
+                </div>
+                <div class="campos">
+                    <label for="text">Apellido: </label><br>
+                    <input type="text" name="apellido" required>
+                </div>
+                <div class="campos_selector">
+                    <label for="text">Usted es:</label>
+                    <div class="selector_rol"><input type="radio" name="gender" value="estudiante" onchange="toggleEspecialidad()">Estudiante</div>
+                    <div class="selector_rol"><input type="radio" name="gender" value="instructores" onchange="toggleEspecialidad()">Instructor</div>
+                </div>
+                <div class="campos_especialidad" id="especialidad-container">
+                    <div><label for="especialidad">Especialidad:</label><br></div>
+                    <div><select class="especialidad"name="especialidad" id="especialidad">
+                        <option value="">Seleccione una especialidad</option>
+                        <option value="Programación Backend">Programación Backend</option>
+                        <option value="Desarroallador de Base de datos">Desarrollador de Base de datos</option>
+                        <option value="Programación Fronter">Programación Fronter</option>
+                    </select></div>
+                </div>
+                <div class="campos">
+                    <label for="text">Correo electrónico:</label><br>
+                    <input type="email" name="mail" required>
+                </div>
+                <div class="campos">
+                    <label for="text">Teléfono:</label><br>
+                    <input type="number" name="tel">
+                </div>
+                <div class="campos">
+                    <label for="text">Contraseña:</label><br>
+                    <input type="password" name="contra" required>
+                </div>
+                <div class="campos">
+                    <label for="text">Repita su contraseña:</label><br>
+                    <input type="password" name="contra2" required>
+                </div>
+                <div class="campos_enviar">
+                    <input class="enviar" type="submit">
+                </div>
             <script src="../archivosjs/contrase.js"></script>
         </form>
     </main>

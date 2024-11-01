@@ -17,7 +17,7 @@
     <section class="seccion-principal">
         <h2>Explora los mejores precios y lenguajes de todo el mundo</h2>
         <p>Siempre al mejor precio</p>
-    </section>
+</section>
 
     <div class="contenedor-cursos" id="contenedor-cursos">
     </div>
