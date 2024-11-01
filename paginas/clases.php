@@ -54,7 +54,9 @@
                 <label for=\"mulopc_".$i."-opc_".$j."\">".$mulopc["opciones"][$i][$j]."</label>
               </div>";
             }
-            echo "</div>";
+            echo "
+            <button id=\"enviar_respuestas\">Enviar respuestas</button>
+            </div>";
           }
         }
       }

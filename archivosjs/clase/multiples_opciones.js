@@ -44,14 +44,14 @@ function Agregar_opc(num_mulopc){
 }
 
 function Enviar_JSONs(){
-    const mulopc_JSON = {texto: [], opciones: [], respuesta: 0};
+    const mulopc_JSON = {texto: [], opciones: [], respuesta: []};
     for(let i=0; i<mulopc.contenedor_general.length; i++){
         mulopc_JSON.texto.push(mulopc.texto[i].value);
         mulopc_JSON.opciones.push([]);
         for(let j=0; j<mulopc.opciones.length; j++){
             mulopc_JSON.opciones.at(-1).push(mulopc.opciones[j].value);
             if(mulopc.opciones[j].value = "1"){
-                mulopc_JSON.respuesta = j;
+                mulopc_JSON.respuesta.push(j);
             }
         }
     }
