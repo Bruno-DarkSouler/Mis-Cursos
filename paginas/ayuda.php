@@ -6,7 +6,13 @@
     <title>Ayuda - Mis Cursos</title>
     <link rel="stylesheet" href="../estilos/ayuda.css">
 </head>
+
 <body>
+
+<?php
+require "../archivosphp/encabezado.php"
+?>
+
     <div class="container">
         <h1>Centro de Ayuda</h1>
         <div class="pregunta">

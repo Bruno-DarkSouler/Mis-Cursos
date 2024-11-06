@@ -14,6 +14,7 @@ nav{
 .logo-titulo{
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .titulo{
   margin-left: 13px;
@@ -27,8 +28,7 @@ nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 300px;
-  margin-right: 300px;
+  width: 30rem;
 }
 .precios, .ayuda, .fundadores{
   color: black;
@@ -93,6 +93,9 @@ nav{
   height: 3rem;
   width: 15rem;
   box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.3);
+}
+.boton-empezar:hover{
+  background-color: #b17402;
 }
 .servicio1{
   background-color: white;
@@ -219,6 +222,9 @@ nav{
   box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.3);
   color: black;
   font-family: sans-serif;
+}
+.boton_categoria:hover{
+  background-color: rgb(141, 141, 141);
 }
 .publicitador{
   background: linear-gradient(white, #DE9102);

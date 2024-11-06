@@ -7,7 +7,6 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
-    padding: 20px;
 }
 
 .container {
@@ -17,6 +16,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin-top: 3rem;
 }
 
 h1 {
@@ -54,4 +54,44 @@ h1 {
 .flecha {
     transition: transform 0.3s ease;
     color: #de9102;
+}
+
+/* Media Query para pantallas de tablet (hasta 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .titulo {
+        font-size: 1.25rem;
+    }
+}
+
+/* Media Query para pantallas de móviles (hasta 480px) */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        padding: 8px;
+    }
+
+    .titulo {
+        font-size: 1.1rem;
+    }
+
+    .respuesta {
+        font-size: 0.9rem;
+    }
 }
