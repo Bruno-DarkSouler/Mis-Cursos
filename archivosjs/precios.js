@@ -2,7 +2,6 @@ const cursos = [
     {
         titulo: "Java ",
         descripcion: "Domina Java desde cero: POO, colecciones, multithreading, Spring Boot y desarrollo de aplicaciones empresariales.",
-        precio: "$USD 19.99",
         icono: "☕",
         nivel: "Todos los niveles",
         tecnologia: "Java",
@@ -11,7 +10,6 @@ const cursos = [
     {
         titulo: "Desarrollo Web con HTML",
         descripcion: "Aprende desarrollo web moderno con HTML, CSS y JavaScript. Crea sitios web responsive y dinámicos.",
-        precio: "$USD 20.99",
         icono: "🌐",
         nivel: "Principiante - intermedio",
         tecnologia: "HTML",
@@ -20,7 +18,6 @@ const cursos = [
     {
         titulo: "C++ Avanzado",
         descripcion: "Programación en C++ moderna: STL, templates, programación genérica, optimización y patrones de diseño.",
-        precio: "$USD 12.99",
         icono: "👨🏾‍💻",
         nivel: "Intermedio - Avanzado",
         tecnologia: "C++",
@@ -29,7 +26,6 @@ const cursos = [
     {
         titulo: "SQL",
         descripcion: "Aprende SQL desde lo básico hasta consultas avanzadas. Optimización de consultas bases de datos.",
-        precio: "$USD 11.99",
         icono: "📊",
         nivel: "Todos los niveles",
         tecnologia: "SQL",
@@ -37,7 +33,6 @@ const cursos = [
     {
         titulo: "MongoDB",
         descripcion: "Domina MongoDB: CRUD, framework de agregación, índices, replicación y arquitecturas NoSQL.",
-        precio: "$USD 23.99",
         icono: "🍃",
         nivel: "Principiante - intermedio",
         tecnologia: "MongoDB",
@@ -46,37 +41,55 @@ const cursos = [
     {
         titulo: "MySQL",
         descripcion: "Gestión profesional de bases de datos MySQL: diseño, optimización, respaldo y recuperación.",
-        precio: "$USD 20.99",
         icono: "🐬",
         nivel: "Principiante - intermedio",
         tecnologia: "MySQL",
     }
 ];
-function handleImageError(img) {
-    img.onerror = null; 
-    img.src = '../icon.jpg'; 
+function filtrarCursos(textoBusqueda) {
+    return cursos.filter(curso => {
+        const contenidoCurso = `
+            ${curso.titulo.toLowerCase()} 
+            ${curso.descripcion.toLowerCase()} 
+            ${curso.tecnologia.toLowerCase()} 
+            ${curso.nivel.toLowerCase()}
+        `;
+        return contenidoCurso.includes(textoBusqueda.toLowerCase());
+    });
 }
-function crearTarjetasCursos() {
+
+function crearTarjetas(cursosFiltrados) {
     const contenedor = document.getElementById('contenedor-cursos');
-    
-    cursos.forEach(curso => {
+    contenedor.innerHTML = ''; // Limpiar contenedor
+
+    if (cursosFiltrados.length === 0) {
+        contenedor.innerHTML = `
+            <div class="mensaje-sin-resultados">
+                <p>No se encontraron cursos que coincidan con tu búsqueda</p>
+            </div>
+        `;
+        return;
+    }
+
+    cursosFiltrados.forEach(curso => {
         const tarjeta = document.createElement('div');
         tarjeta.className = 'tarjeta-curso';
         
         tarjeta.innerHTML = `
             <div class="imagen-curso">
                 ${curso.icono}
-                <span class="tecnologia-curso">${curso.tecnologia}</span>
+                <span class="etiqueta-tecnologia">${curso.tecnologia}</span>
             </div>
             <div class="contenido-curso">
                 <h3 class="titulo-curso">${curso.titulo}</h3>
-                <div class="caracteristicas-curso">
+                <div class="caracteristicas">
                     <span class="caracteristica">📚 ${curso.nivel}</span>
                     ${curso.certificado ? '<span class="caracteristica">🏆 Certificado</span>' : ''}
                 </div>
-                <p class="descripcion-curso">${curso.descripcion}</p>
-                <p class="precio-curso">${curso.precio}</p>
-                <button class="boton" onclick="inscribirCurso('${curso.titulo}')">Inscribirse Ahora</button>
+                <p class="descripcion">${curso.descripcion}</p>
+                <button class="boton-inscripcion" onclick="inscribirCurso('${curso.titulo}')">
+                    Inscribirse Ahora
+                </button>
             </div>
         `;
         
@@ -84,5 +97,28 @@ function crearTarjetasCursos() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', crearTarjetasCursos);
+// Inicializar la búsqueda y los eventos
+document.addEventListener('DOMContentLoaded', () => {
+    crearTarjetas(cursos); // Mostrar todos los cursos inicialmente
 
+    const buscador = document.getElementById('buscador');
+    let timeoutId;
+
+    buscador.addEventListener('input', (e) => {
+        // Cancelar la búsqueda anterior si existe
+        if (timeoutId) {
+            clearTimeout(timeoutId);
+        }
+
+        // Esperar 300ms después de que el usuario deje de escribir
+        timeoutId = setTimeout(() => {
+            const cursosFiltrados = filtrarCursos(e.target.value);
+            crearTarjetas(cursosFiltrados);
+        }, 300);
+    });
+});
+
+function inscribirCurso(tituloCurso) {
+    // Tu lógica de inscripción aquí
+    console.log(`Inscripción al curso: ${tituloCurso}`);
+}

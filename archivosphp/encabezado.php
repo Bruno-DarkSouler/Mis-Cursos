@@ -9,7 +9,7 @@
 <body>
     
 <nav>
-                <a href="../index.html">
+                <a class="link_index" href="../index.html">
                 <div class="logo-titulo">
                     <img class="logo" src="../imagenes/logo_sin_fondo2.png" alt="">
                     <div class="titulo"><h3>Mis Cursos</h3></div>

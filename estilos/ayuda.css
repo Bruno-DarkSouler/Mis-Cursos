@@ -1,11 +1,15 @@
+@font-face{
+    font-family: montserrat;
+    src: url(/Montserrat-Italic-VariableFont_wght.ttf);
+  }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: montserrat;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
 }
 

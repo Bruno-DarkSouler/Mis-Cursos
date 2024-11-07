@@ -22,7 +22,7 @@ body {
     background-color: var(--oscuro);
     padding: 1.5rem 2rem;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: fixed;
+    position: static;
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -190,4 +190,54 @@ body {
     .tecnologias {
         display: none;
     }
+}
+
+.contenedor-buscador {
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+}
+
+.campo-busqueda {
+    width: 100%;
+    max-width: 600px;
+    padding: 0.8rem 1.2rem;
+    border: 2px solid var(--gris);
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.campo-busqueda:focus {
+    border-color: var(--primario);
+    box-shadow: 0 0 0 2px rgba(255, 107, 43, 0.2);
+}
+
+.boton-inscripcion {
+    background-color: var(--primario);
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    font-weight: bold;                                                                                              
+}
+
+.boton-inscripcion:hover {
+    background-color: var(--acento);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 69, 0, 0.2);
+}
+
+.boton-inscripcion:active {
+    transform: translateY(1px);
 }

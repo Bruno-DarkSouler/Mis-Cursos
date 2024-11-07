@@ -1,3 +1,7 @@
+@font-face{
+    font-family: montserrat;
+    src: url(/Montserrat-Italic-VariableFont_wght.ttf);
+  }
 html{
     min-height: 100%;
 }

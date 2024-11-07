@@ -14,6 +14,15 @@
         ?>
     </header>
 
+    <div class="contenedor-buscador">
+        <input 
+            type="text" 
+            id="buscador" 
+            class="campo-busqueda" 
+            placeholder="Buscar cursos..."
+        >
+    </div>
+
     <section class="seccion-principal">
         <h2>Explora los mejores precios y lenguajes de todo el mundo</h2>
         <p>Siempre al mejor precio</p>
