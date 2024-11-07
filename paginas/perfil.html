@@ -7,22 +7,46 @@
     <link rel="stylesheet" href="/estilos/perfil.css">
 </head>
 <body>
-    <div>
-        <div class="foto">
-            <img src="../imagenes/Fotos_de_perfil/Gojo.PNG" alt="No se ha encontrado la foto">
-        </div>
-        <div class="informacion">
-            <h1></h1>
-            <h2></h2>
-            <div class="matriculas">
-                <div class="activas">
-
-                </div>
-                <div class="finalizadas">
+    <main>
+        <section class="perfil">
+            <div class="informacion-usuario">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbyQvQ72Mx4s8uIb6gjlp5T6BffPf5ig1LhA&s" alt="Foto de perfil" class="foto-perfil">
+                <div class="datos">
+                    <h2>Nombre del Usuario</h2>
+                    <p>Correo electrónico: usuario@email.com</p>
+                    <p>Fecha de registro: 2023-08-18</p>
+                    <p>Telefono: 1164554685</p>
+                    <p>Localidad: San Martin</p>
 
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="perfil-detalle">
+                <div class="pregunta">
+                    <h3 class="titulo">Cursos <span class="flecha">▼</span></h3>
+                    <div class="respuesta" id="opciones-perfil">
+                        <ul class="opciones-perfil">
+                            <li><label><input type="checkbox" value="opcion1">C++</label></li>
+                            <li><label><input type="checkbox" value="opcion2">JS</label></li>
+                            <li><label><input type="checkbox" value="opcion3">MySQL</label></li>
+                        </ul>
+                    </div>            
+                </div>
+                <div class="descripcion">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" placeholder="Escribe una breve descripción del usuario..."></textarea>
+                </div>
+                <div class="opciones">
+                    <button id="editar-perfil">Editar perfil</button>
+                    <button>Cerrar sesión</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Mi Página</p>
+    </footer>
+
+    <script src="perfil.js"></script>
 </body>
 </html>
