@@ -1,6 +1,6 @@
 @font-face{
     font-family: montserrat;
-    src: url(/Montserrat-Italic-VariableFont_wght.ttf);
+    src: url(../Montserrat-Italic-VariableFont_wght.ttf);
   }
 *{
     padding: 0;
@@ -28,10 +28,26 @@ form{
     display: block;
     justify-content: center;
     align-items: center;
-    height: 50rem;
     width: 30rem;
     padding: 8%;
     border-radius: 13px
+}
+.div_correoerror{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.correoerror{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 1rem 1rem;
+    background-color: rgb(202, 73, 73);
+    color: white;
+    padding: 1rem;
 }
 .div_texto_principal{
     width: auto;

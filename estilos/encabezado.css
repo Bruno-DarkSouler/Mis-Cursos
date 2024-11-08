@@ -1,6 +1,6 @@
 @font-face{
   font-family: montserrat;
-  src: url(/Montserrat-Italic-VariableFont_wght.ttf);
+  src: url(../Montserrat-Italic-VariableFont_wght.ttf);
 }
 *{
     margin: 0;
@@ -16,7 +16,7 @@
     justify-content: space-between;
     background-color: #DE9102;
     align-items: center;
-    height: 80px;
+    height: 5rem;
   }
   .logo-titulo{
     display: flex;
@@ -26,8 +26,8 @@
     margin-left: 13px;
   }
   .logo{
-    width: 60px;
-    height: 60px;
+    width: 3.75rem;
+    height: 3.75rem;
     margin-left: 13px;
   }
   .opciones{
@@ -47,12 +47,12 @@
     margin-right: 13px;
   }
   .iniciar-sesion{
-    width: 80px;
+    width: 5rem;
     text-align: center;
     color: black;
   }
   .crear-cuenta{
-    width: 80px;
+    width: 5rem;
     text-align: center;
   }
   .letra-crear-cuenta{

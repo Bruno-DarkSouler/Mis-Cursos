@@ -1,6 +1,6 @@
 @font-face{
     font-family: montserrat;
-    src: url(/Montserrat-Italic-VariableFont_wght.ttf);
+    src: url(../Montserrat-Italic-VariableFont_wght.ttf);
   }
 *{
     margin: 0;
@@ -25,7 +25,6 @@ body{
     height: 100vh;
 }
 form{
-    height: 24rem;
     width: 25rem;
     border-radius: 13px;
     display: block;
@@ -64,7 +63,7 @@ label{
 }
 input[type="email"], input[type="password"]{
     margin-top: 8px;
-    width: 80%;
+    width: 82%;
     padding: 8px;
 }
 .div_enviar{
@@ -74,16 +73,34 @@ input[type="email"], input[type="password"]{
     height: auto;
     width: auto;
 }
+.div_errorinicio{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.errorinicio{
+    width: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 1rem 1rem;
+    background-color: rgb(202, 73, 73);
+    color: white;
+    padding: 1rem;
+}
 .url_crear_cuenta{
     margin-top: 13px;
     margin-left: 1.5rem;
 }
 .enviar{
     border: none;
-    height: 30px;
+    height: 1.875rem;
     width: 80%;
     background-color: #DE9102;
     color: white;
+    border-radius: 1rem;
 }
 .enviar:hover{
     background-color: #a16a03;
