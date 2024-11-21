@@ -91,9 +91,10 @@ input[type="submit"]{
     font-size: 113%;
     border: none;
     background-color: #DE9102;
-    width: 13rem;
+    width: 23rem;
     height: 3rem;
     color: white;
+    border-radius: 1rem;
 }
 input[type="submit"]:hover{
     background-color: #a16a03;
@@ -108,11 +109,16 @@ input[type="submit"]:hover{
     color: #DE9102;
     border-radius: 13px;
 
-    
 }
 
 .campos_especialidad{
     display: none;
     justify-content: space-between;
     align-items: center;
+}
+.img_logo{
+    position: relative;
+    left: auto;
+    width: 3rem;
+    height: 3rem;
 }

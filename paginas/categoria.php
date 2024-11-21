@@ -22,7 +22,7 @@
             <div class="descripcion">
                 <h1 class="titulo_lenguaje">C++</h1>
                 <hr>
-                <p class="texto_lenguaje">C++ es un lenguaje de programación diseñado en 1979 por Bjarne Stroustrup. La intención de su creación fue extender al lenguaje de programación C y añadir mecanismos que permiten la manipulación de objetos.</p>
+                <p class="texto_lenguaje">C++ es un lenguaje de programación diseñado en 1979 por Bjarne Stroustrup. La intención de su creación fue extender al lenguaje de programación C.</p>
             </div>
         </div>
 
@@ -67,7 +67,7 @@
             <div class="descripcion">
                 <h1 class="titulo_lenguaje">JavaScript</h1>
                 <hr>
-                <p class="texto_lenguaje">JavaScript es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, ​ basado en prototipos, imperativo, débilmente tipado y dinámico.</p>
+                <p class="texto_lenguaje">JavaScript (abreviado comúnmente JS) es un lenguaje de programación interpretado, dialecto del estándar ECMAScript.</p>
             </div>
         </div>
 
