@@ -3,69 +3,81 @@
   src: url(../Montserrat-Italic-VariableFont_wght.ttf);
 }
 *{
-    padding: 0;
-    margin: 0;
-  }
-  .logo_lab_bases_de_datos{
-    width: 60px;
-    height: 60px;
-    margin-left: 13px;
-  }
-  .titulo{
-    font: 200% sans-serif;
-    margin-top: 13px;
-  }
-  .logo_titulo{
-    display: flex;
-  }
-  p{
-    margin-left: 6px;
-    font: 100% sans-serif;
-    color: white;
-  }
-  .opciones{
-    display: flex;
-  }
-  .perfil{
-    display: flex;
-  }
-  .categoria{
-    margin-left: 17px;
-    display: flex;
-  }
-  .perfil{
-    margin-left: 17px;
-    display: flex;
-  }
-  .configuración{
-    margin-left: 17px;
-    display: flex;
-  }
-  .ayuda{
-    margin-left: 17px;
-    display: flex;
-  }
-  header{
-    background-color: #de9102;
-  }
-  .encabezado{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .crear_cuenta{
-    margin-right: 30px;
-    font: 100% sans-serif;
-    color: white;
-  }
-  .iniciar_sesion{
-    font: 100% sans-serif;
-    color: white;
-  }
-  .sesiones{
-    margin-right: 30px;
-    display: flex;
-  }
-  .imagen_main{
-    margin-top: 30px;
-  }
+  font-family: montserrat;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+html{
+  height: 100%;
+}
+body{
+  min-height: 100%;
+}
+.principal{
+  display: grid;
+  grid-template: 
+    "header header" 5rem
+    "sidevar main" auto
+    "footer footer" 3rem /
+    13rem auto;
+}
+
+.header{
+  grid-area: header;
+  background-color: #DE9102;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sidevar{
+  grid-area: sidevar;
+  background-color: #ca8402;
+}
+.main{
+  grid-area: main;
+  background-color: rgb(213, 213, 213);
+}
+.footer{
+  grid-area: footer;
+  background-color: rgb(45, 49, 46);
+}
+
+.logo{
+  width: 3rem;
+  height: 3rem;
+  margin-right: 13px;
+}
+.img-texto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 150%;
+  margin-left: 13px;
+  color: black;
+}
+.perfil{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 13px;
+}
+.logo_perfil{
+  width: 3.5rem;
+  height: 3.5rem;
+}
+.opcion{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 3.5rem;
+  font-size: 113%;
+  color: black;
+}
+.opcion:hover{
+  background-color: #b67600;
+}
+body a{
+  text-decoration: none;
+}
