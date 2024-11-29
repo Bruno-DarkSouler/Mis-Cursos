@@ -1,107 +1,135 @@
-@font-face{
+@font-face {
     font-family: montserrat;
     src: url(../Montserrat-Italic-VariableFont_wght.ttf);
-  }
+}
+
 body {
     font-family: montserrat;
     margin: 0;
     padding: 0;
-    background-color: #DE9102;
+    background-color: rgba(222, 145, 2, 0.9);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-header {
-    background-color: #000000;
-    color: #fff;
-    padding: 1em 0;
-    text-align: center;
-}
-header h1 {
-    margin: 0;
-}
+
 main {
-    max-width: 800px;
+    width: 90%;
+    max-width: 1200px;
     margin: 2em auto;
-    padding: 1em;
-    background-color: #fcfcfb;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    background-color: rgba(252, 252, 251, 0.95);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
 }
+
 .perfil {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
 }
+
 .informacion-usuario {
     display: flex;
-    align-items: flex-start;
-    gap: 20px;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+    text-align: center;
+    float: left;
 }
+
 .foto-perfil {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
-    border: 2px solid black;
+    border: 3px solid #DE9102;
 }
+
+.datos {
+    text-align: center;
+}
+
 .datos h2 {
     margin-top: 0;
-}
-.pregunta {
-    margin-bottom: 15px;
-    cursor: pointer;
-}
-.titulo {
-    font-size: 1.5rem;
-    color: #333;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.respuesta {
-    margin-top: 10px;
-    padding: 10px;
-    background: #f9f9f9;
-    border-left: 4px solid #de9102; 
-}
-.descripcion {
-    margin-bottom: 20px;
-}
-.descripcion label {
-    display: block;
-    margin-bottom: 5px;
+    font-size: 2.5em;
     color: #DE9102;
 }
+
+.datos p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.descripcion {
+    margin-bottom: 30px;
+    margin: 50px;
+    margin-top: 5px;
+}
+
+.descripcion label {
+    display: block;
+    margin-bottom: 10px;
+    color: #DE9102;
+    font-size: 1.5em;
+}
+
 .descripcion textarea {
     width: 100%;
-    height: 100px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    height: 150px;
+    padding: 15px;
+    border: 2px solid #DE9102;
+    border-radius: 8px;
+    font-size: 1.1em;
+    resize: vertical;
 }
+
 .opciones {
     display: flex;
-    gap: 10px;
+    gap: 20px;
+    justify-content: center;
 }
+
 .opciones button {
-    padding: 10px 20px;
+    padding: 15px 30px;
     background-color: #DE9102;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
 }
+
 .opciones button:hover {
     background-color: #B67700;
 }
-footer {
-    text-align: center;
-    padding: 1em 0;
-    background-color: #000000;
-    color: #fff;
-}
-@media (max-width: 600px) {
+
+@media (max-width: 768px) {
     .informacion-usuario {
         flex-direction: column;
+        text-align: center;
     }
+
     .foto-perfil {
+        width: 250px;
+        height: 250px;
+    }
+
+    .datos h2 {
+        font-size: 2em;
+    }
+
+    .titulo {
+        font-size: 1.5rem;
+    }
+
+    .opciones {
+        flex-direction: column;
+    }
+
+    .opciones button {
         width: 100%;
-        height: auto;
     }
 }
+
