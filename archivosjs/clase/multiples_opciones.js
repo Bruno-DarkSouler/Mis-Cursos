@@ -1,3 +1,5 @@
+const id_curso = document.querySelectorAll("input");
+
 const boton_agregar_mulopc = document.getElementById("nu_mulopc");
 boton_agregar_mulopc.onclick = Agregar_mulopc;
 
@@ -73,9 +75,10 @@ function Enviar_JSONs(){
     }
 
     const ajax = new XMLHttpRequest;
+    console.log(material_JSON);
     ajax.open("POST", "../archivosphp/crearclase.php");
     ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    ajax.send("mulopc_JSON=" + JSON.stringify(mulopc_JSON) + "&tarea_JSON=" + JSON.stringify(tarea_JSON) + "&material_JSON=" + JSON.stringify(material_JSON));
+    ajax.send("mulopc_JSON=" + JSON.stringify(mulopc_JSON) + "&tarea_JSON=" + JSON.stringify(tarea_JSON) + "&material_JSON=" + JSON.stringify(material_JSON) + "&id_curso=" + id_curso[0].id + "&nombre=" + id_curso[0].value);
     ajax.onload = function(){
         let x = ajax.responseText;
         console.log(x);

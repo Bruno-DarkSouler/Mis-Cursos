@@ -1,0 +1,60 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: 50%;
+}
+
+form{
+    background-color: #e8dfff;
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    border: #4500ff solid 3px;
+}
+
+input, textarea{
+    height: 2rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: #8500ff solid 3px;
+    margin-bottom: 1rem;
+    padding: 0.3rem;
+}
+
+label{
+    font-weight: bold;
+}
+
+.contenedor_centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#titulo{
+    height: 3rem;
+    font-size: large;
+}
+
+#consigna{
+    height: 10rem;
+    resize: none;
+}
+
+.enviar{
+    background-color: #e8dfff;
+    width: 30%;
+    height: 3rem;
+    margin-bottom: 0rem;
+    font-size: medium;
+    font-weight: bold;
+    transition: background-color 0.5s ease, border-color 0.5s;
+}
+
+.enviar:hover{
+    background-color: #8500ff;
+    border-color: #e8dfff;
+}

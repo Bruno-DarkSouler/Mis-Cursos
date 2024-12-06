@@ -5,13 +5,13 @@
     $nombreC = $_POST["nombreC"];
     $desc = $_POST["desc"];
     $tema = $_POST["tema"];
-    $fecha = $_POST["fechaF"];
-    $costo = $_POST["costo"];
+    $fecha = FechaActual();
+    $nombre_libro = $_POST["nombre_libro"];
+    $id_aux = ConsultaSelect($conexion, "SELECT MAX(id) AS idM FROM cursos");
+    $id_curso = $id_aux[0]["idM"] + 1;
+    $legajo = $_SESSION["legajo"];
 
-    $consulta = "INSERT INTO `cursos`(`ID_cursos`, `Nombre_del_curso`, `Descripcion`, `Duracion`, `Costo`, `Categoria`) VALUES ('[value-1]','$nombreC','$desc','$fecha','$costo','$tema')";
-    
-    if(mysqli_query($conexion, $consulta)){
-        echo "Bien hecho";
-        // header("Location: ../paginas/cursos.php");
-    }
+
+    ConsultaSinRespuesta($conexion, "INSERT INTO `cursos`(`ID_cursos`, Nombre_del_curso`, `Descripcion`, `Categoria`, `Legajo`) VALUES ('$id_curso','$nombreC','$desc','$tema','$legajo')");
+    ConsultaSinRespuesta($conexion, "INSERT INTO `libro`(`id_curso`, `titulo`) VALUES ('$id_curso','$nombre_libro')");
 ?>

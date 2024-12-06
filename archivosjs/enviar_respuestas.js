@@ -1,12 +1,9 @@
-const boton_enviar = document.getElementById("enviar_respuestas");
+let c1 = document.getElementById("c1");
+let c2 = document.getElementById("c2");
 
-const respuestas = document.querySelectorAll("input[value=1");
-
-boton_enviar.onclick = Enviar_Respuestas;
-
-function Enviar_Respuestas(){
-    let ajax = new XMLHttpRequest;
-
-    ajax.open("GET", "../archivosphp/?respuestas_JSON=" + JSON.stringify(respuestas));
-    ajax.send();
+c1.onchange = function () {
+    if(c1.checked == true){
+        console.log(1);
+    }
+    // console.log(c1.value);
 }

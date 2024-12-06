@@ -1,0 +1,45 @@
+header{
+    height: 5rem;
+}
+
+li{
+    list-style-type: none;
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+
+#libro{
+    width: 30%;
+    margin: 2%;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 15px;
+    background-image: linear-gradient(90deg, #8500ff, #4500ff);
+}
+
+#libro:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+#tareas{
+    width: 60%;
+    margin: 2%;
+    padding: 1rem;
+    background-color: #fcfcfc;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+
+.tarea{
+    width: 100%;
+    margin: 1rem 0.3rem;
+    padding: 0.5rem;
+    transition: transform 0.3s, box-shadow 0.3s; 
+    border-radius: 15px;
+    background-color: #ffeeee;
+}
