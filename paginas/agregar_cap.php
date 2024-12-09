@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../estilos/general.css">
     <link rel="stylesheet" href="../estilos/agregar_cap.css">
+    <link rel="icon" href="../imagenes/logo_sin_fondo2.png">
     <title>Agregar capítulo</title>
 </head>
 <body>

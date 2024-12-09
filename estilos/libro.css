@@ -4,12 +4,6 @@ body{
     align-items: center;
 }
 
-p{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2rem;
-    font-weight: bolder;
-}
-
 main{
     width: 50%;
     margin: 0% 25%;
@@ -51,4 +45,19 @@ ol{
 .opc:hover{
     background-color: #8500ff;
     color: #e8dfff;
+}
+
+#nuevo_cap{
+    font-size: 2rem;
+    margin-top: 1rem;
+    background-color: #8500ff;
+    color: #e8dfff;
+    border-radius: 0.3rem;
+    text-align: center;
+    transition: background-color 1s ease, color 1s ease;
+}
+
+#nuevo_cap:hover{
+    background-color: #CBC3DF;
+    color: #8500ff;
 }

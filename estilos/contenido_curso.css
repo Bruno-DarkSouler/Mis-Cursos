@@ -10,6 +10,11 @@ main{
     justify-content: center;
 }
 
+a{
+    display: block;
+    text-decoration: none;
+}
+
 #libro{
     width: 30%;
     margin: 2%;

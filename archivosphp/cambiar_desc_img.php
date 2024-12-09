@@ -11,5 +11,11 @@
 
     $JSON_img = json_encode($JSON_img);
 
-    ConsultaSinRespuesta($conexion, "UPDATE `capitulos` SET `imagenes`='$JSON_img' WHERE id = '$id_cap'");
+    $respuesta = ConsultaSinRespuesta($conexion, "UPDATE `capitulos` SET `imagenes`='$JSON_img' WHERE id = '$id_cap'");
+
+    if($respuesta == 1){
+        header("Location:../paginas/libro.php?id_cap=" . $id_cap);
+    }else{
+        header("Location:../paginas/libro.php?id_cap=" . $id_cap);
+    }
 ?>

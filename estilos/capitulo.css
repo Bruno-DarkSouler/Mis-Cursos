@@ -34,6 +34,7 @@ main{
     border: 3px solid #4500ff;
     border-bottom: 0px;
     border-left: 0px;
+    z-index: 5;
 }
 
 .cambiar_titulo{
@@ -133,6 +134,8 @@ main{
 .desc_img{
     font-style: italic;
     text-align: center;
+    margin: 1.5rem;
+
 }
 
 .contenedor_modo{
@@ -162,4 +165,57 @@ main{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 1;
+}
+
+
+.modo_editar{
+    display: none;
+}
+
+#formulario_nueva_imagen{
+    background-color: #746F80;
+    padding: 1.5rem;
+    color: #e8dfff;
+    border-radius: 1rem;
+    border: #CBC3DF solid 3px;
+}
+
+#formulario_nueva_imagen textarea{
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    border: #8500ff solid 3px;
+    margin-bottom: 1rem;
+    padding: 0.3rem;
+    resize: vertical;
+    font-size: medium;
+}
+
+#formulario_nueva_imagen input{
+    background-color: #e8dfff;
+    width: 30%;
+    height: 3rem;
+    margin-bottom: 0rem;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    border: #8500ff solid 3px;
+    transition: background-color 0.5s ease, border-color 0.5s;
+}
+
+#formulario_nueva_imagen input:hover{
+    background-color: #8500ff;
+    border-color: #e8dfff;
+}
+
+#formulario_nueva_imagen label{
+    margin-top: 5rem;
+}
+
+.eliminar_desc form{
+    margin: 1rem 3rem;
+}
+
+.cambiar_desc form{
+    margin: 1rem 3rem;
 }
