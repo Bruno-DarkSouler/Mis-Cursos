@@ -1,0 +1,221 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: 60%;
+    margin: 0% 15%;
+    background-color: #e8dfff;
+    padding: 2rem 1.5rem;
+    border-radius: 1rem;
+    border: #4500ff solid 3px;
+}
+
+#editar{
+    display: none;
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor_modo{
+    display: block;
+    position: fixed;
+    bottom: 0rem;
+    left: 0rem;
+    padding: 1rem;
+    background-color: #e8dfff;
+    border-top-right-radius: 5px;
+    border: 3px solid #4500ff;
+    border-bottom: 0px;
+    border-left: 0px;
+    z-index: 5;
+}
+
+.cambiar_titulo{
+    height: 4rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: #8500ff solid 3px;
+    margin-bottom: 1rem;
+    padding: 0.3rem;
+    font-size: 2rem;
+}
+
+.cambiar_contenido{
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    border: #8500ff solid 3px;
+    margin-bottom: 1rem;
+    padding: 0.3rem;
+    resize: vertical;
+    font-size: medium;
+}
+
+.enviar_cambios{
+    background-color: #e8dfff;
+    width: 30%;
+    height: 3rem;
+    margin-bottom: 0rem;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    border: #8500ff solid 3px;
+    transition: background-color 0.5s ease, border-color 0.5s;
+}
+
+.enviar_cambios:hover{
+    background-color: #8500ff;
+    border-color: #e8dfff;
+}
+
+
+
+.titulo{
+    margin-bottom: 3rem;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 3rem;
+}
+
+.parrafo{
+    text-indent: 1rem;
+}
+
+
+
+#contenedor_lateral_imagen{
+    display: flex;
+    position: fixed;
+    right: -40rem;
+    top: 0rem;
+    transition: right 1s ease;
+    z-index: 2;
+}
+
+#tarjeta_deslizadora{
+    background-color: #4500ff;
+    padding: 0.5rem;
+    border: #e8dfff solid 3px;
+    border-top: 0rem;
+    border-right: 0rem;
+    border-radius: 0.5rem;
+    border-collapse: collapse;
+    border-top-right-radius: 0rem;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0rem;
+    color: #e8dfff;
+}
+
+#seccion_imagen{
+    background-color: #e8dfff;
+    width: 40rem;
+    height: 40rem;
+    border: #4500ff solid 3px;
+    border-right: 0px;
+    border-radius: 0.5rem;
+    border-collapse: collapse;
+    border-top-right-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+    border-top-left-radius: 0rem;
+    overflow: scroll;
+}
+
+.imagen_info{
+    padding: 1rem;
+}
+
+.desc_img{
+    font-style: italic;
+    text-align: center;
+    margin: 1.5rem;
+
+}
+
+.contenedor_modo{
+    border-collapse: collapse;
+}
+
+.imagen_libro{
+    width: 90%;
+    display: block;
+    margin: auto;
+    border: 3px solid #8500ff;
+    border-radius: 5px;
+}
+
+.eliminar_imagen{
+    background-color: #ff003b;
+    padding: 0.5rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+#filtro_negro{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+
+.modo_editar{
+    display: none;
+}
+
+#formulario_nueva_imagen{
+    background-color: #746F80;
+    padding: 1.5rem;
+    color: #e8dfff;
+    border-radius: 1rem;
+    border: #CBC3DF solid 3px;
+}
+
+#formulario_nueva_imagen textarea{
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    border: #8500ff solid 3px;
+    margin-bottom: 1rem;
+    padding: 0.3rem;
+    resize: vertical;
+    font-size: medium;
+}
+
+#formulario_nueva_imagen input{
+    background-color: #e8dfff;
+    width: 30%;
+    height: 3rem;
+    margin-bottom: 0rem;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    border: #8500ff solid 3px;
+    transition: background-color 0.5s ease, border-color 0.5s;
+}
+
+#formulario_nueva_imagen input:hover{
+    background-color: #8500ff;
+    border-color: #e8dfff;
+}
+
+#formulario_nueva_imagen label{
+    margin-top: 5rem;
+}
+
+.eliminar_desc form{
+    margin: 1rem 3rem;
+}
+
+.cambiar_desc form{
+    margin: 1rem 3rem;
+}
