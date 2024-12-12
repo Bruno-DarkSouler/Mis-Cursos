@@ -1,0 +1,60 @@
+@font-face{
+    font-family: montserrat;
+    src: url(../Montserrat-Italic-VariableFont_wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+    line-height: 1.5;
+}
+body, html{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tarea{
+    display: grid;
+    grid-template: 
+        "titulo estado_entrega" 1fr
+        "descripcion_tarea area_entrega" 2fr
+        "descripcion_tarea botones_entrega" 2fr /
+        3fr 1.5fr;
+    width: 60rem;
+    height: 30rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+.titulo{
+    grid-area: titulo;
+    display: flex;
+    align-items: center;
+    font-size: 130%;
+    border-bottom: 1px solid black;
+    padding: 1rem;
+}
+.descripcion_tarea{
+    grid-area: descripcion_tarea;
+}
+.titulo_descripcion{
+    font-size: 130%;
+}
+.descripcion{
+    padding: 1rem;
+}
+.estado_entrega{
+    grid-area: estado_entrega;
+    background-color: rgb(132, 141, 132);
+}
+.area_entrega{
+    grid-area: area_entrega;
+    background-color: rgb(132, 141, 132);
+}
+.botones_entrega{
+    grid-area: botones_entrega;
+    background-color: rgb(132, 141, 132);
+}
+.tarea div{
+    margin: 1rem;
+}

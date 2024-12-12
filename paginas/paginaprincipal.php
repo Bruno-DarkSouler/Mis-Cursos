@@ -36,7 +36,12 @@
     </div></a>
   </aside>
 
-  <article class="main"></article>
+  <article class="main">
+    <h1 class="Bienvenida">¡Hola! <<Usuario>>, estos son los cursos a los que estas inscripto.</h1>
+    <?php
+    include "../paginas/mis_cursos.php";
+    ?>
+  </article>
   <footer class="footer"></footer>
 
 </body>

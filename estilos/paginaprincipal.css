@@ -25,18 +25,19 @@ body{
 
 .header{
   grid-area: header;
-  background-color: #DE9102;
+  background-color: #ec9b03;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .sidevar{
   grid-area: sidevar;
-  background-color: #ca8402;
+  background-color: #dd9002;
 }
 .main{
   grid-area: main;
-  background-color: rgb(213, 213, 213);
+  background-color: white;
+  text-align: center;
 }
 .footer{
   grid-area: footer;
@@ -80,4 +81,8 @@ body{
 }
 body a{
   text-decoration: none;
+}
+.Bienvenida{
+  margin: 3rem;
+  font-size: 150%;
 }

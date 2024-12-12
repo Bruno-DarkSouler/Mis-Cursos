@@ -1,0 +1,65 @@
+@font-face{
+    font-family: montserrat;
+    src: url(../Montserrat-Italic-VariableFont_wght.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: montserrat;
+    line-height: 1.5;
+}
+.curso{
+    display: grid;
+    grid-template: 
+        "img nombre categoria" 1fr
+        "img instructor instructor" 1fr
+        "img descripcion descripcion" 1.5fr /
+        13rem 3fr 1fr;
+    width: auto;
+    height: 13rem;
+    margin: 1rem;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: img;
+    height: auto;
+    width: auto;
+    margin: 1rem;
+    border-right: 1px solid black;
+}
+.imagen_perfil{
+    width: 13rem;
+    height: 13rem;
+    padding-right: 1rem;
+}
+.nombre{
+    display: flex;
+    align-items: center;
+    grid-area: nombre;
+    font-size: 210%;
+    margin-left: 13px;
+    margin-top: 13px;
+}
+.categoria{
+    display: flex;
+    align-items: center;
+    grid-area: categoria;
+    font-size: 150%;
+}
+.instructor{
+    display: flex;
+    align-items: center;
+    grid-area: instructor;
+    font-size: 170%;
+    margin-left: 13px;
+}
+.descripcion{
+    grid-area: descripcion;
+    padding: 0.8rem;
+    color: grey;
+}
