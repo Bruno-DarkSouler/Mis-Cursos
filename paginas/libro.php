@@ -2,6 +2,8 @@
     require("../archivosphp/sistema.php");
     $id_cap = $_GET["id_cap"];
     $capitulo = ConsultaSelect($conexion, "SELECT `id`, `id_libro`, `titulo`, `contenido`, imagenes FROM `capitulos` WHERE id = '$id_cap'")[0];
+    $id_curso = ConsultaSelect($conexion, "SELECT `id_curso` FROM `libro` WHERE id = '$capitulo[id_libro]'")[0]["id_curso"];
+    $instructor_curso = VerificarInstructoCurso($conexion, $id_curso);
     $JSON_imagenes = json_decode($capitulo["imagenes"], true);
 ?>
 
@@ -29,14 +31,14 @@
                 <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"16\" height=\"16\" fill=\"currentColor\" class=\"bi bi-arrow-bar-left\" viewBox=\"0 0 16 16\">
                     <path fill-rule=\"evenodd\" d=\"M12.5 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M10 8a.5.5 0 0 1-.5.5H3.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L3.707 7.5H9.5a.5.5 0 0 1 .5.5\"/>
                 </svg>
-                <p>Atrás</p>
+                <p class=\"texto_atras\">Atrás</p>
             </div>
             </a>
             ";
         ?>
         <div id="libro">
             <?php
-                if($_SESSION["rol"] == "ins"){
+                if($instructor_curso){
                     echo "
                     <div id=\"editar\">
                         <form action=\"../archivosphp/actualizar_cap.php\" method=\"post\">
@@ -48,17 +50,23 @@
                             </div>
                         </form>
                     </div>
+                    ";
+                    }
+                    echo "
                     <div id=\"visualizar\">
                         <h1 class=\"titulo\">". $capitulo["titulo"] ."</h1>
                         <p class=\"parrafo\">". $capitulo["contenido"] ."</p>
                     </div>
                     ";
+                if($instructor_curso){
+                    echo "
+                    <div class=\"contenedor_modo\">
+                        <label for=\"cambiar_modo\">Modo edición</label>
+                        <input type=\"checkbox\" value=\"1\" id=\"cambiar_modo\">
+                    </div>
+                    ";
                 }
             ?>
-            <div class="contenedor_modo">
-                <label for="cambiar_modo">Modo edición</label>
-                <input type="checkbox" value="1" id="cambiar_modo">
-            </div>
         </div>
         <div id="contenedor_lateral_imagen">
             <div class="contenedor">
@@ -92,17 +100,21 @@
                                 <p class=\"desc_img\">". $JSON_imagenes["desc"][$i] ."</p>
                                 ";
                             }
+                            if($instructor_curso){
+                                echo "
+                                <form action=\"../archivosphp/subir_img_cap.php\" method=\"post\" enctype=\"multipart/form-data\" id=\"formulario_nueva_imagen\">
+                                    <label for=\"archivo\">Ingrese una imagen para enviar subir</label><br>
+                                    <input type=\"file\" name=\"archivo\" id=\"archivo\" required><br>
+                                    <label for=\"desc\">Ingrese una descripción para la imagen</label><br>
+                                    <textarea name=\"desc\" id=\"desc\" required></textarea><br>
+        
+                                    <input type=\"hidden\" name=\"id_cap\" value=\"". $id_cap ."\">
+        
+                                    <input type=\"submit\" name=\"enviar\">
+                                </form>
+                                ";
+                            }
                         ?>
-                        <form action="../archivosphp/subir_img_cap.php" method="post" enctype="multipart/form-data" id="formulario_nueva_imagen">
-                            <label for="archivo">Ingrese una imagen para enviar subir</label><br>
-                            <input type="file" name="archivo" id="archivo" required><br>
-                            <label for="desc">Ingrese una descripción para la imagen</label><br>
-                            <textarea name="desc" id="desc" required></textarea><br>
-
-                            <input type="hidden" name="id_cap">
-
-                            <input type="submit" name="enviar">
-                        </form>
                     </div>
                 </div>
             </div>

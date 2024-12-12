@@ -61,3 +61,41 @@ ol{
     background-color: #CBC3DF;
     color: #8500ff;
 }
+
+
+
+
+
+@media (max-width: 800px){
+    body{
+        display: block;
+        padding-bottom: 5rem;
+    }
+
+    main{
+        display: block;
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    .titulo{
+        padding: 0;
+    }
+
+    .retroceder{
+        display: block;
+        text-align: center;
+        width: 100%;
+        border-right: 0;
+        border-bottom: 0;
+        border-bottom-right-radius: 0;
+        border-top: 3px solid #4500ff;
+        top: auto;
+        left: 0;
+        bottom: 0;
+    }
+
+    .titulo, #nuevo_cap{
+        font-size: 1.2rem;
+    }
+}

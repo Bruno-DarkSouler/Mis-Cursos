@@ -11,16 +11,30 @@ main{
 }
 
 a{
-    display: block;
+    display: contents;
     text-decoration: none;
 }
 
 #libro{
     width: 30%;
+    color: #fcfcfc;
     margin: 2%;
+    padding: 0.5rem;
     transition: transform 0.3s, box-shadow 0.3s;
     border-radius: 15px;
     background-image: linear-gradient(90deg, #8500ff, #4500ff);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+}
+
+#libro h1{
+    text-align: center;
+    margin-bottom: 2rem;
+    border-top: #fcfcfc solid 2px;
+    border-bottom: #fcfcfc solid 2px;
+}
+
+#libro a{
+    color: #fcfcfc;
 }
 
 #libro:hover{
@@ -47,4 +61,69 @@ a{
     transition: transform 0.3s, box-shadow 0.3s; 
     border-radius: 15px;
     background-color: #ffeeee;
+}
+
+.tarea{
+    color: black;
+}
+
+.tarea:hover{
+    transform: scale(1.02);
+}
+
+#agregar_tarea{
+    color: black;
+    width: 100%;
+    margin: 1rem 0.3rem;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    transition: all 0.5s ease; 
+    border-radius: 15px;
+    background-image: linear-gradient(90deg, #ff4500, #ff6b2b);
+}
+
+#agregar_tarea:hover{
+    transform: scale(1.02);
+    background-image: linear-gradient(90deg, #ff6b2b, #ff4500);
+}
+
+
+
+
+
+.cap{
+    margin: 0.5rem 0;
+    padding: 0 0.25rem;
+    border-top: #fcfcfc solid 1px;
+    border-bottom: #fcfcfc solid 1px;
+    transition: transform 0.5s ease;
+}
+
+.cap:hover{
+    transform: scaleY(1.2);
+}
+
+
+
+.entregado{
+    background-color: #a9ffa6;
+}
+
+.no_entregado{
+    background-color: #ffa6a6;
+}
+
+
+
+
+
+@media (max-width: 800px){
+    main{
+        display: block;
+    }
+
+    #tareas, #libro{
+        width: 100%;
+        margin: 2rem 0;
+    }
 }
