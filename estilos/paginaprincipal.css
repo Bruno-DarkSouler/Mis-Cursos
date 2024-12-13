@@ -85,6 +85,17 @@ body{
 body a{
   text-decoration: none;
 }
+.opciones{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30rem;
+  height: auto;
+  font-size: 130%;
+}
+.opciones a{
+  color: black;
+}
 .Bienvenida{
   margin: 3rem;
   font-size: 150%;

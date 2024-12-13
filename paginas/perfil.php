@@ -2,7 +2,7 @@
 
 require '../archivosphp/sistema.php'; // Conexión a la base de datos
 
-$idEstudiante = $_SESSION['usuario_id'];
+$idEstudiante = $_SESSION['ID_estudiantes'];
 
 // Obtener los datos del estudiante
 $query = "SELECT nombre, apellido, email, telefono, foto_perfil FROM estudiantes WHERE ID_estudiantes = ?";

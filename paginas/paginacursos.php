@@ -9,7 +9,7 @@ require ("../archivosphp/sistema.php")
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title></title>
-  <link href="../estilos/paginaprincipal.css" rel="stylesheet" type="text/css" />
+  <link href="../estilos/paginacursos.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body class="principal">
@@ -30,10 +30,11 @@ require ("../archivosphp/sistema.php")
   <div class=\"ayuda\"><a href=\"../paginas/paginacursos.php\">Cursos</a></div>
   <div class=\"fundadores\"><a href=\"\">Ayuda</a></div>";
   }
+
   if ($_SESSION["rol"] == "est"){
     echo "<div class=\"crear_curso\"><a href=\"../paginas/paginacursos.php\">Incribirse</a></div>
   <div class=\"ayuda\"><a href=\"../paginas/fundadores.php\">Fundadores</a></div>
-  <div class=\"fundadores\"><a href=\"../ayuda.php\">Ayuda</a></div>";
+  <div class=\"fundadores\"><a href=\"../paginas/ayuda.php\">Ayuda</a></div>";
   }
 
 
@@ -57,33 +58,18 @@ require ("../archivosphp/sistema.php")
   </aside>
 
   <article class="main">
-    <h1 class="Bienvenida">¡Hola! <<nombre_usuario>>, estos son los cursos a los que estas inscripto.</h1>
-    
-  <?php
+    <h1 class="Bienvenida">¡Hola! <<nombre_usuario>>, estos son los cursos disponibles.</h1>
 
-  require("../archivosphp/inscripción.php");
-
-if (isset($_GET['id_curso'])) {
-    $id_curso = $_GET['id_curso'];
-
-    echo "El ID del curso seleccionado es: " . $id_curso;
-
-    $consulta = "SELECT  FROM cursos WHERE ID_cursos = '$id_curso'";
-    $resultado = $conexion->query($consulta);
-    $curso = $resultado->fetch_assoc();
-
-    echo "Nombre del curso: " . $curso['Nombre_del_curso'];
-    echo "Descripción: " . $curso['Descripcion'];
-    echo "Precio: " . $curso['Costo'];
-} else {
-    echo "No se ha seleccionado un curso.";
-}
-?>
+    <div class="grid">
+        <div>
+        <?php
+    require ("../paginas/curso.php");
+    ?>
+    </div>
+    </div>
 
   </article>
   <footer class="footer"></footer>
-
-<script src="../archivosjs/inscribirse.js"></script>
 
 </body>
 </html> 

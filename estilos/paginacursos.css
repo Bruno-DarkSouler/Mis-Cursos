@@ -1,0 +1,107 @@
+@font-face{
+    font-family: montserrat;
+    src: url(../Montserrat-Italic-VariableFont_wght.ttf);
+  }
+  *{
+    font-family: montserrat;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+  html{
+    height: 100%;
+  }
+  body{
+    min-height: 100%;
+  }
+  .principal{
+    display: grid;
+    grid-template: 
+      "header header" 5rem
+      "sidevar main" auto
+      "footer footer" 3rem /
+      13rem auto;
+  }
+  
+  .header{
+    grid-area: header;
+    background-color: #ec9b03;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sidevar{
+    grid-area: sidevar;
+    background-color: #dd9002;
+  }
+  .main{
+    grid-area: main;
+    background-color: white;
+    text-align: center;
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #888 #eee;
+  }
+  .footer{
+    grid-area: footer;
+    background-color: rgb(45, 49, 46);
+  }
+  
+  .logo{
+    width: 3rem;
+    height: 3rem;
+    margin-right: 13px;
+  }
+  .img-texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 150%;
+    margin-left: 13px;
+    color: black;
+  }
+  .perfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 13px;
+  }
+  .logo_perfil{
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+  .opcion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 3.5rem;
+    font-size: 113%;
+    color: black;
+  }
+  .opcion:hover{
+    background-color: #b67600;
+  }
+  body a{
+    text-decoration: none;
+  }
+  .opciones{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30rem;
+    height: auto;
+    font-size: 130%;
+  }
+  .opciones a{
+    color: black;
+  }
+  .Bienvenida{
+    margin: 3rem;
+    font-size: 150%;
+  }
+  .grid{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    grid-auto-rows: auto;
+  }

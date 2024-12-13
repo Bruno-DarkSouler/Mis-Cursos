@@ -13,7 +13,7 @@
         <?php
             require("../archivosphp/sistema.php");
 
-            $id_alum = $_GET["id_alum"];
+            $id_alum = $_GET["ID_estudiantes"];
 
             $consulta = "SELECT * FROM estudiantes WHERE ID_estudiantes = '$id_alum'";
             $resultado = $conexion->query();
