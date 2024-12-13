@@ -95,11 +95,15 @@
 
 
     function VerificarInstructoCurso($conexion, $id_curso){
-        $legajo_curso = ConsultaSelect($conexion, "SELECT `Legajo` FROM `cursos` WHERE Legajo = '$id_curso'")[0]["Legajo"];
-        if($_SESSION["legajo"] == $legajo_curso){
-            return 0;
+        $legajo_curso = ConsultaSelect($conexion, "SELECT `Legajo` FROM `cursos` WHERE ID_cursos = '$id_curso'")[0]["Legajo"];
+        if($_SESSION["rol"] == "ins"){
+            if($_SESSION["legajo"] == $legajo_curso){
+                return true;
+            }else{
+                return false;
+            }
         }else{
-            return 1;
+            return false;
         }
     }
 

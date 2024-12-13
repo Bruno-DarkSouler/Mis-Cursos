@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title></title>
   <link href="../estilos/paginaprincipal.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -37,10 +37,12 @@
   </aside>
 
   <article class="main">
-    <h1 class="Bienvenida">¡Hola! <<Usuario>>, estos son los cursos a los que estas inscripto.</h1>
+    <h1 class="Bienvenida">¡Hola! <<nombre_usuario>>, estos son los cursos a los que estas inscripto.</h1>
+    
     <?php
-    include "../paginas/mis_cursos.php";
-    ?>
+echo "Contenido original de la página principal.";
+?>
+
   </article>
   <footer class="footer"></footer>
 

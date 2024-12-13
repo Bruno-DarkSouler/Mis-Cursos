@@ -219,3 +219,69 @@ main{
 .cambiar_desc form{
     margin: 1rem 3rem;
 }
+
+
+
+
+
+@media (max-width: 800px){
+    body{
+        display: block;
+        padding-bottom: 5rem;
+    }
+
+    main{
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    .retroceder{
+        display: block;
+        text-align: center;
+        width: 100%;
+        border-right: 0;
+        border-bottom: 0;
+        border-bottom-right-radius: 0;
+        border-top: 3px solid #4500ff;
+        top: auto;
+        left: 0;
+        bottom: 0;
+    }
+
+    .enviar_cambios{
+        width: auto;
+    }
+
+    .contenedor_modo{
+        display: block;
+        text-align: center;
+        width: 100%;
+        border-right: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: 3px solid #4500ff;
+        border-top: 3px solid #4500ff;
+        top: auto;
+        left: 0;
+        bottom: 3rem;
+    }
+
+    .texto_atras{
+        display: inline-block;
+    }
+
+    .titulo{
+        font-size: 1.5rem;
+    }
+
+    .contenedor_modo{
+        z-index: 1;
+    }
+
+    #contenedor_lateral_imagen{
+        right: -10rem
+    }
+
+    #seccion_imagen{
+        width: 10rem;
+    }
+}

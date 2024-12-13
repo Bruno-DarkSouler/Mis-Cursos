@@ -38,6 +38,9 @@ body{
   grid-area: main;
   background-color: white;
   text-align: center;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #eee;
 }
 .footer{
   grid-area: footer;

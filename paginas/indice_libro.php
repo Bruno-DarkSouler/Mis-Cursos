@@ -4,6 +4,7 @@
     $titulo_libro = ConsultaSelect($conexion, "SELECT `titulo` FROM `libro` WHERE id = '$id_libro'")[0]["titulo"];
     $id_curso = ConsultaSelect($conexion, "SELECT `id_curso` FROM `libro` WHERE id = '$id_libro'")[0]["id_curso"];
     $libro = ConsultaSelect($conexion, "SELECT `id`, `id_libro`, `titulo`, `contenido` FROM `capitulos` WHERE id_libro = '$id_libro'");
+    $instructor_curso = VerificarInstructoCurso($conexion, $id_curso);
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +24,19 @@
 <body>
     <main>
         <?php
+            echo "<h1 class=\"titulo\">". $titulo_libro ."</h1>";
+            echo "<ol>";
+            for($i = 0; $i < count($libro); $i++){
+                echo "<a href=\"./libro.php?id_cap=". $libro[$i]["id"] ."\"><li class=\"opc\">". $libro[$i]["titulo"] ."</li></a>";
+                
+            }
+            if($instructor_curso){
+                echo "
+                <a href=\"./agregar_cap.php?id_libro=". $id_libro ."\"><p id=\"nuevo_cap\">+ Nuevo Capítulo</p></a>
+            </ol>";
+        }
+        ?>
+        <?php
             echo "
             <a href=\"./contenido_curso.php?id_curso=". $id_curso ."\">
             <div class=\"retroceder\">
@@ -33,17 +47,6 @@
             </div>
             </a>
             ";
-        ?>
-        <?php
-            echo "<h1 class=\"titulo\">". $titulo_libro ."</h1>";
-            echo "<ol>";
-            for($i = 0; $i < count($libro); $i++){
-                echo "<a href=\"./libro.php?id_cap=". $libro[$i]["id"] ."\"><li class=\"opc\">". $libro[$i]["titulo"] ."</li></a>";
-                
-            }
-            echo "
-            <a href=\"./agregar_cap.php?id_libro=". $id_libro ."\"><p id=\"nuevo_cap\">+ Nuevo Capítulo</p></a>
-            </ol>";
         ?>
     </main>
 </body>

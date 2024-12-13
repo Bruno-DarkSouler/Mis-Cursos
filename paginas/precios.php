@@ -30,6 +30,7 @@
 
     <div class="contenedor-cursos" id="contenedor-cursos">
     </div>
+    <button id="generarCodigo">Agregar Código</button>
     <script src="../archivosjs/precios.js"></script>
 </body>
 </html>

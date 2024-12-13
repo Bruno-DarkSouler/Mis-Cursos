@@ -122,3 +122,21 @@ function inscribirCurso(tituloCurso) {
     // Tu lógica de inscripción aquí
     console.log(`Inscripción al curso: ${tituloCurso}`);
 }
+
+document.getElementById("generarCodigo").addEventListener("click", function () {
+    // Crear una solicitud AJAX
+    const xhr = new XMLHttpRequest();
+    xhr.open("POST", "../paginas/agregar_curso.php", true); // Cambia la ruta según tu estructura de carpetas
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            alert(xhr.responseText); // Mensaje de éxito o error
+        } else {
+            alert("Error al enviar la solicitud.");
+        }
+    };
+
+    // Enviar la solicitud al servidor
+    xhr.send();
+});

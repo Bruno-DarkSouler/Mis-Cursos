@@ -8,8 +8,8 @@
     $resultado = ConsultaSinRespuesta($conexion, "INSERT INTO `capitulos`(`id_libro`, `titulo`, `contenido`) VALUES ('$id_libro','$titulo','$contenido')");
 
     if($resultado == 0){
-        header("../paginas/indice_libro.php?id_libro=" . $id_libro);
+        header("Location:../paginas/indice_libro.php?id_libro=" . $id_libro);
     }else{
-        header("../paginas/agregar_cap.php?error=" . "1&id_libro=" . $id_libro);
+        header("Location:../paginas/agregar_cap.php?error=" . "1&id_libro=" . $id_libro);
     }
 ?>

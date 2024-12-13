@@ -37,7 +37,7 @@
                             </div>
                         </div>
                     </div>"
-                }
+                ;}
             }
             if(isset($_GET["id_curso"])){
                 $consulta = "";

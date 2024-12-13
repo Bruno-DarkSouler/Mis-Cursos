@@ -5,26 +5,27 @@
     require("./sistema.php");
 
     $Email = $_POST["Email"];
-    $rol = $_POST["gender"];
     $contra = $_POST["contra"];
 
-    $consulta = "SELECT ID_estudiantes, contra, Email, Nombre FROM estudiantes WHERE '$Email' = estudiantes.Email and '$contra' = estudiantes.contra";
-    $resultado = $conexion->query($consulta);
+    $resultado = ConsultaSelect($conexion, "SELECT ID_estudiantes, contra, Email, Nombre FROM estudiantes WHERE '$Email' = estudiantes.Email and '$contra' = estudiantes.contra")[0];
 
-    if($resultado->num_rows > 0){
+    $rol = ConsultaSelect($conexion, "SELECT ID_instructores FROM `instructores` WHERE id_estudiante = $resultado[ID_estudiantes]");
+
+    if($resultado == 0){
         session_start();
-        while($row = $resultado->fetch_assoc()){
-            $_SESSION["id"] = $row["ID_estudiantes"];
-            $_SESSION["nombre"] = $row["Nombre"];
-            $_SESSION["email"] = $row["Email"];
-            $_SESSION["rol"] = $rol;
-            $_SESSION["contra"] = $row["contra"];
-            header("Location: ../index.php");
+        $_SESSION["id"] = $resultado["ID_estudiantes"];
+        $_SESSION["nombre"] = $resultado["Nombre"];
+        $_SESSION["email"] = $resultado["Email"];
+        if($rol = 0){
+            $_SESSION["rol"] = "ins";
+            $_SESSION["legajo"] = $rol[0]["ID_instructores"];
+        }else{
+            $_SESSION["rol"] = "est";
         }
+        $_SESSION["contra"] = $resultado["contra"];
+        header("Location: ../index.php");
         
     } else{
         header("Location: ../paginas/iniciosesion.html");
     }
-
-    $conexion->close();
 ?>

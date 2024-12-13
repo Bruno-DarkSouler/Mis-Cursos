@@ -70,3 +70,45 @@ label{
     display: block;
     width: 2rem;
 }
+
+
+
+.retroceder{
+    background-color: #ffeeee;
+    border: 3px solid #ff4500;
+    border-top: 0px;
+    border-left: 0px;
+    color: #ff6b2b
+}
+
+
+
+
+
+@media (max-width: 800px){
+    body{
+        display: block;
+        padding-bottom: 5rem;
+    }
+
+    main{
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    .retroceder{
+        display: block;
+        text-align: center;
+        width: 100%;
+        border-right: 0;
+        border-bottom: 0;
+        border-bottom-right-radius: 0;
+        border-top: 3px solid #ff4500;
+        top: auto;
+        left: 0;
+        bottom: 0;
+    }
+    .enviar{
+        width: auto;
+    }
+}

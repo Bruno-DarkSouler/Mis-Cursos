@@ -28,8 +28,8 @@
                 </div>
                 <div class="campos_selector">
                     <label for="text">Usted es:</label>
-                    <div class="selector_rol"><input type="radio" name="gender" value="estudiante" onchange="toggleEspecialidad()">Estudiante</div>
-                    <div class="selector_rol"><input type="radio" name="gender" value="instructores" onchange="toggleEspecialidad()">Instructor</div>
+                    <div class="selector_rol"><input type="radio" name="gender" value="est" onchange="toggleEspecialidad()">Estudiante</div>
+                    <div class="selector_rol"><input type="radio" name="gender" value="ins" onchange="toggleEspecialidad()">Instructor</div>
                 </div>
                 <div class="campos_especialidad" id="especialidad-container">
                     <div><label for="especialidad">Especialidad:</label><br></div>
@@ -40,6 +40,12 @@
                         <option value="Programación Fronter">Programación Fronter</option>
                     </select></div>
                 </div>
+
+                <div class="campos">
+                    <label for="legajo">Legajo:</label><br>
+                    <input type="text" name="legajo">
+                </div>
+
                 <div class="campos">
                     <label for="text">Correo electrónico:</label><br>
                     <input type="email" name="mail" required>
